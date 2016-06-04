@@ -55,7 +55,7 @@
 //    网络视频：九筒
 //    http://cn-cq2-cu.acgvideo.com/vg6/d/9a/7821732-1.flv?expires=1464946200&ssig=E7_5u3n3F3Bl3mhmIA4fCg&oi=456114645&player=1&or=1885007044&rate=0
     
-    IJKMoviePlayerViewController *playerVC = [IJKMoviePlayerViewController InitVideoViewFromViewController:self withTitle:@"GLTest" URL:[NSURL URLWithString:@"http://cn-cq2-cu.acgvideo.com/vg6/d/9a/7821732-1.flv?expires=1464976200&ssig=iL2m0AdqDmp1l6nPahqUmA&oi=2018899911&player=1&or=1885007044&rate=0"] isLiveVideo:YES isOnlineVideo:NO isFullScreen:NO completion:nil];
+    IJKMoviePlayerViewController *playerVC = [IJKMoviePlayerViewController InitVideoViewFromViewController:self withTitle:@"GLTest" URL:[NSURL URLWithString:@"http://cn-fjqz2-cu.acgvideo.com/vg4/5/b4/7848007-1.flv?expires=1465072800&ssig=13Iat-ocXNlEjpAkZVvCgQ&oi=2018871841&player=1&or=1885007044&rate=0"] isLiveVideo:YES isOnlineVideo:NO isFullScreen:NO completion:nil];
     [self addChildViewController:playerVC];
     [self.view addSubview:playerVC.view];
     

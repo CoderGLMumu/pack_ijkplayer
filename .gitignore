@@ -60,3 +60,5 @@ fastlane/screenshots
 iOSInjectionProject/
 
 pack_ijkplayer/IJKMediaFramework.framework/
+
+Pods/

@@ -91,6 +91,9 @@
                                             <exclude reference="zvC-9F-7C5"/>
                                         </mask>
                                     </variation>
+                                    <connections>
+                                        <action selector="onClickPlayOrPause:" destination="-1" eventType="touchUpInside" id="7nW-CP-kpT"/>
+                                    </connections>
                                 </button>
                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zuI-OK-e66">
                                     <rect key="frame" x="121" y="14" width="159.5" height="2"/>
@@ -212,9 +215,9 @@
                                     </state>
                                     <variation key="default">
                                         <mask key="constraints">
+                                            <exclude reference="5iH-hV-Phc"/>
                                             <exclude reference="CX5-JU-TBN"/>
                                             <exclude reference="MKD-ND-APn"/>
-                                            <exclude reference="5iH-hV-Phc"/>
                                             <exclude reference="Sgj-S7-jt6"/>
                                         </mask>
                                     </variation>
@@ -316,7 +319,8 @@
                 <outlet property="overlayPanel" destination="Q2e-XA-bD2" id="hET-Lw-o6L"/>
                 <outlet property="panel_bottomCpmstraont" destination="qoi-4P-WzR" id="9fX-z3-Dfo"/>
                 <outlet property="panel_topCpmstraont" destination="R2s-85-lIj" id="A83-0R-JXH"/>
-                <outlet property="playOrPause" destination="8nb-jV-VAd" id="gGX-zv-xeN"/>
+                <outlet property="playOrPause" destination="8nb-jV-VAd" id="5ge-aV-ZN8"/>
+                <outlet property="smallPlayOrPause" destination="R8U-Mj-hnE" id="Dzy-wf-emv"/>
                 <outlet property="topPanel" destination="ZRY-GE-b83" id="JSp-lu-ZcG"/>
                 <outlet property="totalDurationLabel" destination="Vg0-uu-zfs" id="tcp-UB-4lk"/>
             </connections>
@@ -545,9 +549,9 @@
                                     </state>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="lK8-wD-ffA"/>
                                             <exclude reference="ExB-U2-kac"/>
                                             <exclude reference="hG5-Ly-jsA"/>
+                                            <exclude reference="lK8-wD-ffA"/>
                                         </mask>
                                     </variation>
                                     <connections>
@@ -587,10 +591,10 @@
                                     </state>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="whz-Ug-13M"/>
-                                            <exclude reference="kaA-I9-KzZ"/>
                                             <exclude reference="Phb-Ux-FiH"/>
+                                            <exclude reference="kaA-I9-KzZ"/>
                                             <exclude reference="oxV-TM-Y9f"/>
+                                            <exclude reference="whz-Ug-13M"/>
                                         </mask>
                                     </variation>
                                     <connections>
@@ -617,9 +621,9 @@
                                     </state>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="M82-7T-uwd"/>
-                                            <exclude reference="BLt-ra-m2L"/>
                                             <exclude reference="0zw-Ah-YsL"/>
+                                            <exclude reference="BLt-ra-m2L"/>
+                                            <exclude reference="M82-7T-uwd"/>
                                         </mask>
                                     </variation>
                                     <connections>
@@ -646,9 +650,9 @@
                                     </state>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="p9d-oB-moo"/>
                                             <exclude reference="1IY-dK-Y39"/>
                                             <exclude reference="ifq-Ih-szU"/>
+                                            <exclude reference="p9d-oB-moo"/>
                                         </mask>
                                     </variation>
                                     <connections>
@@ -684,8 +688,8 @@
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
-                                    <exclude reference="pZw-eR-jsl"/>
                                     <exclude reference="4Fl-fo-bTr"/>
+                                    <exclude reference="pZw-eR-jsl"/>
                                     <exclude reference="60W-3w-ENW"/>
                                 </mask>
                             </variation>
@@ -710,9 +714,9 @@
                             </state>
                             <variation key="default">
                                 <mask key="constraints">
-                                    <exclude reference="ziO-mu-EGo"/>
                                     <exclude reference="1ag-0m-ZGh"/>
                                     <exclude reference="T2S-dd-Xag"/>
+                                    <exclude reference="ziO-mu-EGo"/>
                                 </mask>
                             </variation>
                             <connections>
@@ -762,7 +766,7 @@
                 <outlet property="overlayPanel" destination="WcX-xW-baQ" id="wsG-sj-TBV"/>
                 <outlet property="panel_bottomCpmstraont" destination="9qb-M4-C41" id="glA-Af-GCm"/>
                 <outlet property="panel_topCpmstraont" destination="bEM-pJ-b6M" id="OF7-ee-zv6"/>
-                <outlet property="playOrPause" destination="Mm9-a1-33I" id="pna-ny-oso"/>
+                <outlet property="playOrPause" destination="Mm9-a1-33I" id="ZEV-f5-pwB"/>
                 <outlet property="topPanel" destination="d2P-uM-ldw" id="uJm-6F-vqZ"/>
                 <outlet property="totalDurationLabel" destination="Bg9-yv-BBL" id="eIg-vF-fKp"/>
             </connections>

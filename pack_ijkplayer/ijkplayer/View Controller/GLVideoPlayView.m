@@ -130,7 +130,6 @@ typedef NS_ENUM(NSInteger, PanDirection){
 
 - (void)hide
 {
-    
     _panel_bottomCpmstraont.constant = -45;
     _panel_topCpmstraont.constant = -45;
     
@@ -141,6 +140,7 @@ typedef NS_ENUM(NSInteger, PanDirection){
         [self layoutIfNeeded];
     }];
     
+    self.isHideTool = YES;
     [self cancelDelayedHide];
 }
 
@@ -197,8 +197,7 @@ typedef NS_ENUM(NSInteger, PanDirection){
     
     
     // status
-    BOOL isPlaying = [self.delegatePlayer isPlaying];
-    self.playOrPause.selected = !isPlaying;
+//    BOOL isPlaying = [self.delegatePlayer isPlaying];
 //    self.playButton.hidden = isPlaying;
 //    self.pauseButton.hidden = !isPlaying;
     

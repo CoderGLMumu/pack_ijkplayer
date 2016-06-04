@@ -82,6 +82,7 @@
 		04E37BDD1D01721C00A96759 /* player_addcoin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E37BDC1D01721C00A96759 /* player_addcoin@2x.png */; };
 		04E37BDF1D0172FB00A96759 /* player_danmaku_setup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E37BDE1D0172FB00A96759 /* player_danmaku_setup@2x.png */; };
 		04E37BE11D01732D00A96759 /* icmpv_more_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E37BE01D01732D00A96759 /* icmpv_more_light@2x.png */; };
+		F9CB49759244EBF9F79B8552 /* Pods_pack_ijkplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FF63DECE2FD3874E1C9A1C /* Pods_pack_ijkplayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,6 +185,9 @@
 		04E37BDC1D01721C00A96759 /* player_addcoin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_addcoin@2x.png"; sourceTree = "<group>"; };
 		04E37BDE1D0172FB00A96759 /* player_danmaku_setup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_danmaku_setup@2x.png"; sourceTree = "<group>"; };
 		04E37BE01D01732D00A96759 /* icmpv_more_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icmpv_more_light@2x.png"; sourceTree = "<group>"; };
+		31FF63DECE2FD3874E1C9A1C /* Pods_pack_ijkplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pack_ijkplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA8243497928CFB15E11923 /* Pods-pack_ijkplayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pack_ijkplayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pack_ijkplayer/Pods-pack_ijkplayer.debug.xcconfig"; sourceTree = "<group>"; };
+		69BAFA89CA222DD028735A50 /* Pods-pack_ijkplayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pack_ijkplayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-pack_ijkplayer/Pods-pack_ijkplayer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,7 @@
 				042BB1B91CEC163D000559A4 /* libbz2.tbd in Frameworks */,
 				042BB1B71CEC1636000559A4 /* libz.tbd in Frameworks */,
 				042BB1971CEC151E000559A4 /* IJKMediaFramework.framework in Frameworks */,
+				F9CB49759244EBF9F79B8552 /* Pods_pack_ijkplayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +221,8 @@
 			children = (
 				042BB15B1CEC109A000559A4 /* pack_ijkplayer */,
 				042BB15A1CEC109A000559A4 /* Products */,
+				A721176AB536C45179A443EF /* Pods */,
+				1ADE70CD107F9CB4DA45C962 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -404,6 +411,23 @@
 			path = scale;
 			sourceTree = "<group>";
 		};
+		1ADE70CD107F9CB4DA45C962 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31FF63DECE2FD3874E1C9A1C /* Pods_pack_ijkplayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A721176AB536C45179A443EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DA8243497928CFB15E11923 /* Pods-pack_ijkplayer.debug.xcconfig */,
+				69BAFA89CA222DD028735A50 /* Pods-pack_ijkplayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,9 +435,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 042BB1701CEC109A000559A4 /* Build configuration list for PBXNativeTarget "pack_ijkplayer" */;
 			buildPhases = (
+				FE56EFED7C0C8DE0BA99E236 /* 📦 Check Pods Manifest.lock */,
 				042BB1551CEC109A000559A4 /* Sources */,
 				042BB1561CEC109A000559A4 /* Frameworks */,
 				042BB1571CEC109A000559A4 /* Resources */,
+				4B86D7F63F1429AF5DE5D216 /* 📦 Embed Pods Frameworks */,
+				E42AE42A1DA0362587841F18 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -509,6 +536,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B86D7F63F1429AF5DE5D216 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pack_ijkplayer/Pods-pack_ijkplayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E42AE42A1DA0362587841F18 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pack_ijkplayer/Pods-pack_ijkplayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE56EFED7C0C8DE0BA99E236 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		042BB1551CEC109A000559A4 /* Sources */ = {
@@ -644,6 +719,7 @@
 		};
 		042BB1711CEC109A000559A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DA8243497928CFB15E11923 /* Pods-pack_ijkplayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -664,6 +740,7 @@
 		};
 		042BB1721CEC109A000559A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69BAFA89CA222DD028735A50 /* Pods-pack_ijkplayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (

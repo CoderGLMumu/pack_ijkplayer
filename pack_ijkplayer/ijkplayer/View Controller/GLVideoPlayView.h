@@ -32,12 +32,16 @@
 /** 是否是在线直播 */
 @property (nonatomic, assign) BOOL isOnlineVideo;
 
+/** isHideTool */
+@property (nonatomic, assign) BOOL isHideTool;
+
 @property(nonatomic,strong) IBOutlet UIView *overlayPanel;
 @property(nonatomic,strong) IBOutlet UIView *topPanel;
 @property(nonatomic,strong) IBOutlet UIView *bottomPanel;
 
 @property (weak, nonatomic) IBOutlet UIButton *fullSreenBtn;
 @property (weak, nonatomic) IBOutlet UIButton *playOrPause;
+@property (weak, nonatomic) IBOutlet UIButton *smallPlayOrPause;
 
 @property(nonatomic,strong) IBOutlet UILabel *currentTimeLabel;
 @property(nonatomic,strong) IBOutlet UILabel *totalDurationLabel;

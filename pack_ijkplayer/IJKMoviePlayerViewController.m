@@ -13,6 +13,7 @@
 #import "GLonlineVideoPlayView.h"
 
 #import "Masonry/Masonry.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 #import "ZFBrightnessView.h"
 
@@ -24,9 +25,6 @@
 @property (nonatomic, assign) BOOL isFullScreen;
 /** 是否是直播视频 */
 @property (nonatomic, assign) BOOL isOnlineVideo;
-
-/** isHideTool */
-@property (nonatomic, assign) BOOL isHideTool;
 
 /** 包装player的旋转view */
 @property (nonatomic, weak) UIView *rotationView;
@@ -137,6 +135,8 @@
     UITapGestureRecognizer *sliderTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSliderAction:)];
     [self.playView.mediaProgressSlider addGestureRecognizer:sliderTap];
     [self.playViewFullScreen.mediaProgressSlider addGestureRecognizer:sliderTap];
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -252,22 +252,22 @@
 - (IBAction)onClickOverlay:(id)sender
 {
     if (self.isOnlineVideo) {
-        if (self.isHideTool) {
+        if (self.playView.isHideTool) {
             [self.onlinePlayView showAndFade];
-            self.isHideTool = NO;
+            self.playView.isHideTool = NO;
         }else{
             [self.onlinePlayView hide];
-            self.isHideTool = YES;
+            self.playView.isHideTool = YES;
         }
     }else{
-        if (self.isHideTool) {
+        if (self.playView.isHideTool) {
             [self.playView showAndFade];
             [self.playViewFullScreen showAndFade];
-            self.isHideTool = NO;
+            self.playView.isHideTool = NO;
         }else{
             [self.playView hide];
             [self.playViewFullScreen hide];
-            self.isHideTool = YES;
+            self.playView.isHideTool = YES;
         }
     }
     
@@ -408,11 +408,11 @@
 
 #pragma mark - OnlineVideoPlayView工具条事件处理
 - (IBAction)onClickPlayOrPause:(UIButton *)sender {
-    if (sender.isSelected) {
-        sender.selected = NO;
+    if (!sender.isSelected) {
+        sender.selected = YES;
         [self.player play];
     }else{
-        sender.selected = YES;
+        sender.selected = NO;
         [self.player pause];
     }
 }
@@ -516,6 +516,12 @@
     
     [self onClickPlayOrPause:nil];
     
+    RAC(self.playView.playOrPause,selected) = RACObserve(self.player, isPlaying);
+    RAC(self.playView.smallPlayOrPause,selected) = RACObserve(self.playView.playOrPause,selected);
+    RAC(self.playViewFullScreen.playOrPause,selected) = RACObserve(self.player, isPlaying);
+    RAC(self.playView.fullSreenBtn,selected) = RACObserve(self, isFullScreen);
+    RAC(self.playViewFullScreen.fullSreenBtn,selected) = RACObserve(self, isFullScreen);
+    
     // 亮度view加到window最上层
     ZFBrightnessView *brightnessView = [ZFBrightnessView sharedBrightnessView];
     [self.view addSubview:brightnessView];
@@ -532,10 +538,6 @@
     }
 }
 
-- (BOOL)buttonIsPlayOrPause
-{
-    return [self.player isPlaying];
-}
 
 - (void)moviePlayBackStateDidChange:(NSNotification*)notification {
     NSLog(@"moviePlayBackStateDidChange");
